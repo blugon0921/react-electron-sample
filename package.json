@@ -1,0 +1,98 @@
+{
+  "name": "react-electron-sample",
+  "version": "0.1.0",
+  "author": "Blugon",
+  "private": true,
+  "main": "public/electron.js",
+  "homepage": "./",
+  "dependencies": {
+    "@electron/remote": "^2.1.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "electron-is-dev": "^2.0.0",
+    "electron-log": "^5.0.3",
+    "electron-progressbar": "^2.1.0",
+    "electron-updater": "^6.1.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^6.1.6",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blugon0921/react-electron-sample"
+  },
+  "build": {
+    "productName": "React Electron",
+    "appId": "kr.blugon.react_electron",
+    "publish": {
+      "provider": "github",
+      "owner": "blugon0921",
+      "repo": "react-electron-sample",
+      "releaseType": "release"
+    },
+    "asar": true,
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "build/icon.icns"
+    },
+    "dmg": {
+      "title": "React Electron",
+      "icon": "build/icon.icns"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/favicon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": false,
+      "perMachine": true,
+      "language": 1042,
+      "installerIcon": "build/favicon.ico",
+      "shortcutName": "React Electron",
+      "artifactName": "React Electron-${version}.${ext}",
+      "uninstallDisplayName": "React Electron"
+    },
+    "directories": {
+      "buildResources": "./build/",
+      "output": "./dist/"
+    }
+  }
+}
